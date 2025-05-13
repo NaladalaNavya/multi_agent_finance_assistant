@@ -1,10 +1,16 @@
+# Import necessary libraries
+import sys
 import streamlit as st
 import requests
 import tempfile
 from streamlit_webrtc import webrtc_streamer
 import av
 
+# ✅ **Set page config FIRST** (before any other Streamlit commands)
 st.set_page_config(page_title="Finance Assistant", layout="centered")
+
+# Now you can use other Streamlit functions
+st.write("Python executable path:", sys.executable)
 st.title("📈 Multi-Agent Finance Assistant")
 
 option = st.radio("Choose your input type:", ["Text", "Microphone"])
@@ -24,7 +30,7 @@ if option == "Text":
         except requests.exceptions.RequestException as e:
             st.error(f"❌ Text error: {e}")
 
-# --- Microphone-based query using legacy webrtc_streamer ---
+# --- Microphone-based query ---
 elif option == "Microphone":
     st.info("🎙 Speak into your mic and click 'Submit Voice'")
 

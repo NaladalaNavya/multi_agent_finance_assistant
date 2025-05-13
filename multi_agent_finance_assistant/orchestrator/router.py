@@ -1,3 +1,8 @@
+import sys
+import os
+
+# Add the parent folder to Python’s import path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from agents.api_agent import APIAgent
 from agents.scraping_agent import ScrapingAgent
 from agents.retriever_agent import RetrieverAgent

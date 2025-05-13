@@ -1,10 +1,25 @@
+import sys
+import os
+
+# Add the parent folder to Python’s import path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from fastapi import FastAPI, UploadFile, File
 from orchestrator.router import Router
 from orchestrator.fallback import FallbackHandler
+import requests
+import sys
+import os
+
+# Add the parent folder to Python’s import path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 app = FastAPI()
 router = Router()
 fallback = FallbackHandler()
+
+@app.get("/")  # Define a root route for "/"
+async def read_root():
+    return {"message": "Welcome to the Multi-Agent Finance Assistant API!"}
 
 @app.post("/ask/text")
 async def ask_text(query: str):
