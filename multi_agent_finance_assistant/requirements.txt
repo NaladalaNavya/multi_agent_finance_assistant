@@ -1,0 +1,14 @@
+# Do NOT include faiss-cpu here if using conda
+fastapi
+uvicorn
+streamlit
+requests
+beautifulsoup4
+newspaper3k
+yfinance
+sentence-transformers
+pyttsx3
+openai-whisper
+transformers
+matplotlib
+pydantic
