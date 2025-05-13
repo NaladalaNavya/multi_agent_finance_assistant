@@ -17,13 +17,3 @@ An open-source, voice-enabled RAG-based system that delivers daily market briefs
 
 ---
 
-## 🏗️ System Architecture
-
-```mermaid
-graph TD
-    A[Voice Input (Mic/Upload)] --> B[Whisper STT]
-    B --> C[Intent Recognition]
-    C --> D[API Ingestion Agent]
-    D --> E[Semantic Retrieval Agent]
-    E --> F[LLM-based Synthesis]
-    F --> G[Voice Output]
