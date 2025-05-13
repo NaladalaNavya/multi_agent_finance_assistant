@@ -17,7 +17,7 @@ An open-source, voice-enabled RAG-based system that delivers daily market briefs
 
 ---
 
-## 🏗️ System Architecture-
+## 🏗️ System Architecture
 
 ```mermaid
 graph TD
@@ -27,5 +27,3 @@ graph TD
     D --> E[Semantic Retrieval Agent]
     E --> F[LLM-based Synthesis]
     F --> G[Voice Output]
-
-```
